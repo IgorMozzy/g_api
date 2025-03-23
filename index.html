@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenAPI</title>
+
+  <link rel="stylesheet" href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container flex-container">
+    <div class="left-container flex-column">
+      <div class="left-panel flex-column">
+        <input id="idInstance" placeholder="idInstance">
+        <input id="apiTokenInstance" placeholder="ApiTokenInstance">
+      </div>
+      <div class="button-container flex-column">
+        <button onclick="apiRequest('getSettings', {}, true)">getSettings</button>
+        <button onclick="apiRequest('getStateInstance', {}, true)">getStateInstance</button>
+      </div>
+      <div class="left-panel flex-column">
+        <input id="phoneNumber" placeholder="77771234567">
+        <textarea rows="5" id="messageText" placeholder="Hello World!"></textarea>
+        <button onclick="sendMessage()">sendMessage</button>
+      </div>
+      <div class="left-panel flex-column">
+        <input id="filePhoneNumber" placeholder="77771234567">
+        <input id="fileUrl" placeholder="https://my.site.com/img/horse.png">
+        <button onclick="sendFileByUrl()">sendFileByUrl</button>
+      </div>
+    </div>
+    <div class="response-container flex-column">
+      <h3>Ответ:</h3>
+      <div class="right-panel" id="responseBox">Ответ сервера появится здесь</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
